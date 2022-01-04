@@ -5,6 +5,7 @@
 #include <sep/models.hpp>
 #include <xml/adapter.hpp>
 #include <xml/xml_validator.hpp>
+#include <cta2045/cta2045.hpp>
 
 std::string g_program_path;
 
@@ -18,13 +19,14 @@ void GetParentPath(char** arg)
 
 int main(int argc, char **argv)
 {
-  GetParentPath(argv);
+  CTA2045 c = CTA2045();
+  // GetParentPath(argv);
 
-  HttpsClient client(g_program_path, "localhost", "443");
+  // HttpsClient client(g_program_path, "localhost", "443");
 
-  std::cout << client.Get("/dcap") << std::endl;
-  std::cout << client.Get("/tm") << std::endl;
-  std::cout << client.Get("/edev") << std::endl;
+  // std::cout << client.Get("/dcap") << std::endl;
+  // std::cout << client.Get("/tm") << std::endl;
+  // std::cout << client.Get("/edev") << std::endl;
   
 std::string freq = R"(<?xml version="1.0" encoding="utf-8"?>
 <FlowReservationRequest href="http://uri1" xmlns="urn:ieee:std:2030.5:ns">
@@ -50,9 +52,9 @@ std::string freq = R"(<?xml version="1.0" encoding="utf-8"?>
     <requestStatus>0</requestStatus>
   </RequestStatus>
 </FlowReservationRequest>)";
-   client.Post("/freq", freq);
-   std::cout << client.Get("/fres") << std::endl;
-   std::cout << client.Get("/sdev") << std::endl;
+  //  client.Post("/freq", freq);
+  //  std::cout << client.Get("/fres") << std::endl;
+  //  std::cout << client.Get("/sdev") << std::endl;
     //std::cout << response << std::endl;
     //sep::DeviceCapability *dcap = new sep::DeviceCapability;
     //xml::Parse(boost::beast::buffers_to_string(response.body().data()), dcap);

@@ -1,5 +1,6 @@
 add_subdirectory(https)
 add_subdirectory(ecs)
+add_subdirectory(cta2045)
 
 set(COMPONENT_NAME dcm)
 
@@ -12,6 +13,7 @@ target_link_libraries(${COMPONENT_NAME} PUBLIC
   SEP_Models
   XML_Validator
   pthread
+  CTA2045
 )
 
 target_include_directories(${COMPONENT_NAME} PUBLIC
