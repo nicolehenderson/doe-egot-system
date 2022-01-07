@@ -15,10 +15,10 @@ posts_received = 0
 post_data = ''
 host_port = 4430
 host_name = 'localhost'  # DTM Rpi address
-rel_path_raspi_workaround = '../build/bin'
+rel_path_raspi_workaround = '../../build/bin'
 key_path = rel_path_raspi_workaround + '/certs/private/server.key'
 cert_path = rel_path_raspi_workaround + '/certs/server.crt'
-LOG_FILE = 'Trustlog_testing1.xml'
+LOG_FILE = 'Updated_trustlog_testing1.xml'
 
 
 def cta_msg_valid(xml_string):

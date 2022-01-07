@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<TrustLog>
+<dtm_log_entry logged="2022-01-06 17:15:18.503630">
+	<message>
+		<from>DCM</from>
+		<to>DTM</to>
+		<content>
+			<CTA2045_Message>
+				<target>DCM_Startup</target>
+				<body>DCM system starting up</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518118</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:21.044858">
+	<message>
+		<from>DCM</from>
+		<to>DER</to>
+		<content>
+			<CTA2045_Message>
+				<target>GetEnergyCommand</target>
+				<body>GetEnergy</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518121</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:21.073789">
+	<message>
+		<from>DER</from>
+		<to>DCM</to>
+		<content>
+			<CTA2045_Message>
+				<target>GetEnergyResponse</target>
+				<body>
+					<message>
+						<from>DER</from>
+						<to>DCM</to>
+						<content>
+							<response>
+								<type>import: 600 Wh, export: 1500 Wh</type>
+							</response>
+						</content>
+						<DCM_timestamp>1641518121</DCM_timestamp>
+					</message>
+				</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518121</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:22.526646">
+	<message>
+		<from>DCM</from>
+		<to>DER</to>
+		<content>
+			<CTA2045_Message>
+				<target>GetNameplateCommand</target>
+				<body>GetNameplate</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518122</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:22.558505">
+	<message>
+		<from>DER</from>
+		<to>DCM</to>
+		<content>
+			<CTA2045_Message>
+				<target>GetNameplateResponse</target>
+				<body>
+					<message>
+						<from>DER</from>
+						<to>DCM</to>
+						<content>
+							<response>
+								<type>Power 4500 Watts, Max Export Energy 2100 Wh, Max Import Energy 4500 Wh</type>
+							</response>
+						</content>
+						<DCM_timestamp>1641518122</DCM_timestamp>
+					</message>
+				</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518122</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:23.756966">
+	<message>
+		<from>DCM</from>
+		<to>DER</to>
+		<content>
+			<CTA2045_Message>
+				<target>ImportEnergyCommand</target>
+				<body>ImportEnergy</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518123</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:24.743332">
+	<message>
+		<from>DCM</from>
+		<to>DER</to>
+		<content>
+			<CTA2045_Message>
+				<target>ExportEnergyCommand</target>
+				<body>ExportEnergy</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518124</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:26.483346">
+	<message>
+		<from>DCM</from>
+		<to>DER</to>
+		<content>
+			<CTA2045_Message>
+				<target>IdleCommand</target>
+				<body>Idle</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518126</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:27.178907">
+	<message>
+		<from>DCM</from>
+		<to>DER</to>
+		<content>
+			<CTA2045_Message>
+				<target>CriticalPeakEventCommand</target>
+				<body>CriticalPeakEvent</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518127</DCM_timestamp>
+	</message>
+</dtm_log_entry><dtm_log_entry logged="2022-01-06 17:15:27.692150">
+	<message>
+		<from>DCM</from>
+		<to>DTM</to>
+		<content>
+			<CTA2045_Message>
+				<target>DCM_Shutdown</target>
+				<body>DCM system shutting down</body>
+			</CTA2045_Message>
+		</content>
+		<DCM_timestamp>1641518127</DCM_timestamp>
+	</message>
+</dtm_log_entry></TrustLog>

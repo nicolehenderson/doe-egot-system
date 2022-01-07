@@ -43,7 +43,7 @@ std::string ImportEnergy::Execute()
     std::cout << "  ImportEnergy Command Executing... " << std::endl;
 
     //this is specific to a simulated receiver at this point, and not based on a particular resource.
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "ImportEnergyCommand", "na", "ImportEnergy"));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "CTA2045_Message", "ImportEnergyCommand", "ImportEnergy"));
 
     response_from_der = receiver_->Import();
     
@@ -80,7 +80,7 @@ std::string ExportEnergy::Execute()
     std::cout << "  ExportEnergy Command Executing... " << std::endl;
 
     //this is specific to a simulated receiver at this point, and not based on a particular resource.
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "ExportEnergyCommand", "na", "ExportEnergy"));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "CTA2045_Message", "ExportEnergyCommand", "ExportEnergy"));
 
     response_from_der = receiver_->Export();
     //https_client_->Post("DTM", response_from_der);
@@ -112,13 +112,13 @@ std::string GetEnergy::Execute()
     std::cout << "  GetEnergy Command Executing... " << std::endl;
 
     //this is specific to a simulated receiver at this point, and not based on a particular resource.
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "GetEnergyCommand", "na", "GetEnergy"));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "CTA2045_Message", "GetEnergyCommand", "GetEnergy"));
     response_from_der = receiver_->GetEnergy();
     if (response_from_der[0] == 'C') //if cta2045receiver
     {
         std::cout << "GetEnergy::Execute() response from der: " << response_from_der << std::endl;
     }
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DER", "DCM", "GetEnergyResponse", "na", response_from_der));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DER", "DCM", "CTA2045_Message", "GetEnergyResponse", response_from_der));
     return response_from_der;
 }
 
@@ -145,9 +145,9 @@ std::string GetNameplate::Execute()
     std::string response_from_der = "der response not supported yet";
     std::cout << "  GetNameplate Command Executing... " << std::endl;
 
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "GetNameplateCommand", "na", "GetNameplate"));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "CTA2045_Message", "GetNameplateCommand", "GetNameplate"));
     response_from_der = receiver_->GetNameplate();
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DER", "DCM", "GetNameplateResponse", "na", response_from_der));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DER", "DCM", "CTA2045_Message", "GetNameplateResponse", response_from_der));
 
     return response_from_der;
 }
@@ -176,7 +176,7 @@ std::string Idle::Execute()
     std::cout << "  Idle Command Executing... " << std::endl;
 
     //this is specific to a simulated receiver at this point, and not based on a particular resource.
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "IdleCommand", "na", "Idle"));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "CTA2045_Message", "IdleCommand", "Idle"));
 
     response_from_der = receiver_->Idle();
     //https_client_->Post("DTM", response_from_der);
@@ -208,7 +208,7 @@ std::string CriticalPeakEvent::Execute()
     std::cout << "  CriticalPeakEvent Command Executing... " << std::endl;
 
     //this is specific to a simulated receiver at this point, and not based on a particular resource.
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "CriticalPeakEventCommand", "na", "CriticalPeakEvent"));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "CTA2045_Message", "CriticalPeakEventCommand", "CriticalPeakEvent"));
     response_from_der = receiver_->CriticalPeakEvent();
     //https_client_->Post("DTM", response_from_der);
 
@@ -239,7 +239,7 @@ std::string GridEmergencyEvent::Execute()
     std::cout << "  GridEmergencyEvent Command Executing... " << std::endl;
 
     //this is specific to a simulated receiver at this point, and not based on a particular resource.
-    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "GridEmergencyEventCommand", "na", "GridEmergencyEvent"));
+    https_client_->Post("DTM", xml_writer_.WriteMsg("DCM", "DER", "CTA2045_Message", "GridEmergencyEventCommand", "GridEmergencyEvent"));
     response_from_der = receiver_->GridEmergencyEvent();
     //https_client_->Post("DTM", response_from_der);
 
