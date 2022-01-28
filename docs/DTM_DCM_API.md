@@ -3,7 +3,7 @@
 
 ### Notes:
 * The DTM runs a simple http server on localhost:4430 (127.0.0.1 port 4430)
-* The DTM server has only __2__ end points 
+* The DTM server has only __1__ end point with __2__ methods available. 
 ## End points:
 * `/`
 ## Methods available
